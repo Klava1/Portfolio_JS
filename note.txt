@@ -1,0 +1,27 @@
+NHS depression test
+https://amplified-wooded-discovery.glitch.me
+
+Split the bill
+https://gigantic-level-ocicat.glitch.me
+
+Weather API
+https://good-iced-question.glitch.me
+
+Motivational quotes
+https://jumpy-rift-bactrosaurus.glitch.me
+
+Sushi restaurant 
+https://overjoyed-reminiscent-poison-animation.glitch.me
+
+Destiny game
+https://elderly-secretive-sandalwood.glitch.me
+
+Pomodoro
+https://gorgeous-cold-operation.glitch.me
+
+Typing in JS
+https://polyester-rich-huckleberry.glitch.me
+
+Issues: When the website is loaded the text whixh is being typed are changing the layout of the page
+the video does't stretch on the width of the screen
+when you check the website from the phone -- the 
