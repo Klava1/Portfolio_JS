@@ -65,7 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 120px;
+  margin-left: 20px;
 }
 
 h1,
@@ -94,7 +94,6 @@ p {
 .my_img {
   width: 450px;
   height: auto;
-  padding: 0 120px;
 }
 
 .my_stack {
