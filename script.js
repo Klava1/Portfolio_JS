@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (targetDiv) {
     const text = targetDiv.getAttribute("data-content");
     if (text) {
-      const linkText = `<a href="https://globalchic.club" target="_blank" style="color:#00ffc3; text-decoration: none;">GLOBAL CHIC CLUB.</a>`;
+      const linkText = `<a href="https://globalchic.club" target="_blank" style="color:#00ffcc; text-decoration: none;">GLOBAL CHIC CLUB.</a>`;
       const processedText = text.replace("GLOBAL CHIC CLUB.", "");
 
       let i = 0;
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // GSAP Animations
   gsap.from(".logo", { opacity: 0, duration: 1, scaleX: 0, scaleY: 0 });
   gsap.from(".nav-item", {
     opacity: 0,
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     x: -2000,
   });
 
+  // Heading hover animations
   const headings = document.querySelectorAll("h2");
   headings.forEach((heading) => {
     const tl = gsap
@@ -52,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Stack item click animations
   const stackItems = document.querySelectorAll(".stack_item");
   stackItems.forEach((item) => {
     const tl = gsap
@@ -63,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Helper function for hover animations
   function addAnimation(element, properties) {
     if (!element) return;
 
@@ -79,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // CV and contact form animations
   const cvContainer = document.getElementById("cv_container");
   addAnimation(cvContainer, { scale: 1.05, duration: 1 });
 
