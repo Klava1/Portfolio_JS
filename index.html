@@ -57,21 +57,48 @@
     </div>
 
     <div class="about_me">
-      <div class="my_description">
-        <h1>ABOUT ME</h1>
-        <p
-          class="text"
-          data-content="I'm a frontend developer specializing in UI/UX design with expanding full-stack capabilities. I build responsive, high-performance websites using React, JavaScript, HTML, CSS, and GSAP, with additional experience in Node.js and MongoDB.
-My focus is creating intuitive user experiences that balance exceptional design with seamless functionality. I prioritize performance optimization, cross-device compatibility, and user-centered design in every project.
-I'm passionate about continuous learning and tackling complex challenges. Currently seeking opportunities to contribute to innovative web projects.
-Recent work: Platform development for "
-        ></p>
+      <div class="about_content">
+        <div class="about_text_section">
+          <h1>ABOUT ME</h1>
+          <p class="about_text">
+            Hi! I'm Klavdiya, full-stack developer and founder of
+            <a
+              href="https://globalchic.club"
+              target="_blank"
+              class="project_link"
+              >Global Chic</a
+            >
+            — an ecosystem for businesses and like-minded people to connect,
+            grow, and collaborate.
+          </p>
+          <p class="about_text">
+            I build web platforms from scratch — React on the front, Node and
+            Mongo on the back — and I also run our partnership program, helping
+            brands and communities team up through smart tech.
+          </p>
+          <p class="about_text">
+            I love clean design, clever code, and turning good ideas into real
+            products. So… if you're looking for someone who builds with brains
+            and heart — let's work together 😉
+          </p>
+        </div>
+        <div class="about_video_section">
+          <video
+            class="about_video"
+            autoplay
+            loop
+            playsinline
+            controls
+            poster="about_video_poster.jpg"
+          >
+            <source
+              src="me_portfolio1.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
-      <img
-        src="klava.png"
-        alt="Klava_photo"
-        class="my_img"
-      />
     </div>
     <h2 id="my_stack">MY STACK</h2>
     <div class="my_stack">
@@ -127,7 +154,74 @@ Recent work: Platform development for "
       />
     </div>
 
-    <h2 id="my_works">EXAMPLES OF MY RECENT WORKS</h2>
+    <!-- Skills Radar Chart Section -->
+    <section class="skills_chart_section">
+      <div class="chart_container">
+        <h2>SKILLS FOCUS AREAS</h2>
+        <div class="radar_chart_wrapper">
+          <canvas
+            id="radar-chart-root"
+            width="400"
+            height="400"
+          ></canvas>
+        </div>
+        <p class="chart_description">
+          My expertise spans across various domains, with particular strength in
+          CRM integrations and concierge flows for luxury services.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video_section">
+      <div class="video_container">
+        <h2>WATCH MY WORK IN ACTION</h2>
+        <div class="video_wrapper">
+          <video
+            id="portfolio_video"
+            class="main_video"
+            poster="video_poster.jpg"
+            controls
+            preload="metadata"
+            muted
+          >
+            <source
+              src="portfolio_demo.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="portfolio_demo.webm"
+              type="video/webm"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video_overlay">
+            <button
+              class="play_button"
+              id="play_button"
+            >
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M8 5v14l11-7z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="video_description">
+          See my development process and the final results of my projects in
+          this comprehensive showcase.
+        </p>
+      </div>
+    </section>
+
+    <h2 id="my_works">EXAMPLES OF MY PRE-AI ERA WORKS</h2>
 
     <div class="cards_container">
       <div class="card">
@@ -313,5 +407,84 @@ Recent work: Platform development for "
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- Skills Radar Chart with Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Wait for DOM to be ready
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document
+          .getElementById("radar-chart-root")
+          .getContext("2d");
+
+        const radarChart = new Chart(ctx, {
+          type: "radar",
+          data: {
+            labels: [
+              "CRM Integrations",
+              "Concierge Flows",
+              "Marketplace Design",
+              "Luxury Services",
+              "Education Tech",
+              "AI Automation",
+            ],
+            datasets: [
+              {
+                label: "Global Chic Focus",
+                data: [25, 20, 15, 15, 15, 10],
+                backgroundColor: "rgba(255, 159, 67, 0.3)",
+                borderColor: "#ff9f43",
+                borderWidth: 2,
+                pointBackgroundColor: "#ff9f43",
+                pointBorderColor: "#00ffcc",
+                pointBorderWidth: 2,
+                pointRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                labels: {
+                  color: "#00ffcc",
+                  font: {
+                    size: 14,
+                    weight: "bold",
+                  },
+                },
+              },
+            },
+            scales: {
+              r: {
+                beginAtZero: true,
+                max: 25,
+                min: 0,
+                ticks: {
+                  color: "#a1a1aa",
+                  font: {
+                    size: 12,
+                  },
+                },
+                pointLabels: {
+                  color: "#00ffcc",
+                  font: {
+                    size: 12,
+                    weight: "bold",
+                  },
+                },
+                grid: {
+                  color: "rgba(0, 255, 204, 0.2)",
+                },
+                angleLines: {
+                  color: "rgba(0, 255, 204, 0.2)",
+                },
+              },
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>

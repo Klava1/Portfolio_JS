@@ -1,0 +1,29 @@
+{
+  "name": "klava-portfolio",
+  "version": "1.0.0",
+  "description": "Klava's portfolio website showcasing frontend development projects",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "echo 'Static site - no build process needed'",
+    "serve": "http-server -p 3000 -o"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "html",
+    "css",
+    "javascript",
+    "react",
+    "gsap"
+  ],
+  "author": "Klava",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  }
+}
+
+

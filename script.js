@@ -1,41 +1,67 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const targetDiv = document.querySelector(".text");
-  if (targetDiv) {
-    const text = targetDiv.getAttribute("data-content");
-    if (text) {
-      const linkText = `<a href="https://globalchic.club" target="_blank" style="color:#00ffcc; text-decoration: none;">GLOBAL CHIC CLUB.</a>`;
-      const processedText = text.replace("GLOBAL CHIC CLUB.", "");
+  // Video play button functionality
+  const playButton = document.getElementById("play_button");
+  const portfolioVideo = document.getElementById("portfolio_video");
+  const videoWrapper = document.querySelector(".video_wrapper");
 
-      let i = 0;
-      const speed = 10;
-
-      targetDiv.innerHTML = "";
-
-      function type() {
-        if (i < processedText.length) {
-          targetDiv.innerHTML += processedText.charAt(i);
-          i++;
-          setTimeout(type, speed);
-        } else if (i === processedText.length) {
-          targetDiv.innerHTML += linkText;
-        }
+  if (playButton && portfolioVideo && videoWrapper) {
+    playButton.addEventListener("click", function () {
+      if (portfolioVideo.paused) {
+        portfolioVideo.play();
+        videoWrapper.classList.add("playing");
+        playButton.style.display = "none";
       }
+    });
 
-      type();
-    }
+    portfolioVideo.addEventListener("pause", function () {
+      videoWrapper.classList.remove("playing");
+      playButton.style.display = "flex";
+    });
+
+    portfolioVideo.addEventListener("ended", function () {
+      videoWrapper.classList.remove("playing");
+      playButton.style.display = "flex";
+    });
   }
 
   // GSAP Animations
   gsap.from(".logo", { opacity: 0, duration: 1, scaleX: 0, scaleY: 0 });
-  gsap.from(".nav-item", {
+
+  // About section animations
+  gsap.from(".video_overlay_content", {
     opacity: 0,
-    x: -50,
-    duration: 1,
-    onStart: function () {
-      console.log("Opacity + x animation started");
-    },
+    y: 50,
+    duration: 1.5,
+    delay: 0.5,
+    ease: "power2.out",
   });
-  gsap.from(".my_img", { opacity: 0, duration: 1, scaleX: 0, scaleY: 0 });
+
+  gsap.from(".about_text", {
+    opacity: 0,
+    x: -30,
+    duration: 1,
+    stagger: 0.3,
+    delay: 1,
+    ease: "power2.out",
+  });
+
+  // Video section animations
+  gsap.from(".video_container h2", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    delay: 0.5,
+    ease: "power2.out",
+  });
+
+  gsap.from(".video_wrapper", {
+    opacity: 0,
+    scale: 0.9,
+    duration: 1.2,
+    delay: 0.8,
+    ease: "power2.out",
+  });
+
   gsap.from(".stack_item", {
     duration: 4,
     ease: "elastic.inOut",
