@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Split your bill</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="split-bill-style.css"
+    />
+  </head>
+  <body>
+    <div class="center">
+      <div id="container">
+        <h1 id="header">Let's split our bill!</h1>
+        <form>
+          <p>Bill</p>
+          <span>
+            <input
+              type="text"
+              placeholder="Bill"
+              id="bill"
+          /></span>
+          <p>Number of people</p>
+          <span
+            ><input
+              type="text"
+              id="people"
+              placeholder="How many people?"
+          /></span>
+          <p>Did you like our service?</p>
+          <button id="addTip">Add a tip!</button>
+          <select id="tip">
+            <option disabled>Choose an option</option>
+            <option value="0.3">30%</option>
+            <option value="0.2">20%</option>
+            <option value="0.1">10%</option>
+            <option
+              value="0.00"
+              selected
+            >
+              No tip
+            </option>
+          </select>
+          <button id="btn">Calculate</button>
+        </form>
+
+        <div id="showTotalAmountToPay">
+          <div id="billSplit">
+            <p>Bill</p>
+            <span>$</span>
+            <span id="dividedBill"></span>
+            <span>per person</span>
+          </div>
+
+          <div id="totalTip">
+            <p>Tip</p>
+            <span>$</span>
+            <span id="dividedTip"></span>
+            <span>per person</span>
+          </div>
+
+          <div id="totalAmount">
+            <p>Total</p>
+            <span>$</span>
+            <span id="billAndTip"></span>
+            <span>per person</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="split-bill-script.js"></script>
+  </body>
+</html>
+

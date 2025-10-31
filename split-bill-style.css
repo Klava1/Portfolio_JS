@@ -1,0 +1,79 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  background-color: rgba(151, 172, 164, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 725px;
+  border-radius: 40px;
+  color: rgb(33, 32, 32);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #1e4f2c;
+  align-self: center;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+}
+
+#addTip {
+  background-color: #6e86e6;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#btn {
+  background-color: #389b3b;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#tip {
+  font-family: "Montserrat", sans-serif;
+  display: none;
+}
+
+#showTotalAmountToPay {
+  display: flex;
+}
+
+#billSplit,
+#totalTip,
+#totalAmount {
+  font-family: "Montserrat", sans-serif;
+  background-color: #de7878db;
+  margin: 20px;
+  padding: 0 20px 20px 20px;
+  border-radius: 40px;
+  border: 1px solid black;
+}
+

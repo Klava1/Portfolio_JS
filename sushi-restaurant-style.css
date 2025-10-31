@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li,
+a {
+  padding: 30px 50px;
+  font-size: 35px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#logo {
+  padding: 40px;
+  width: 15%;
+  -webkit-transform: rotate(180deg);
+}
+
+li {
+  list-style-type: none;
+  color: #ffffff;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
+  margin-top: -30px;
+}
+
+#description {
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  padding: 80px 180px;
+  position: absolute;
+  z-index: 1;
+}
+
+#container_pic_1 {
+  display: flex;
+  justify-content: right;
+  position: relative;
+  margin-top: 300px;
+}
+
+#pic_1 {
+  width: 60%;
+  margin-top: -160px;
+}
+
+#menu,
+#contact_us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+#pic_menu {
+  width: 90%;
+}
+
+#about_us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#chef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+#container_location {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+#chef img,
+#chef_description {
+  margin: 10px 20px;
+}
+
+#chef_description {
+  font-size: 25px;
+}
+
+#pic_chef {
+  width: 30%;
+}
+
+#pic_location {
+  width: 30%;
+  place-items: center;
+  margin: 10px 100px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  margin: 10px 100px 10px 100px;
+  font-size: 30px;
+}
+
+button {
+  background-color: #043705;
+  border: white 1px solid;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 4px 2px 40px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #032303;
+  transform: scale(1.1);
+}
+
+@media all and (max-width: 1200px) {
+  #navbar li,
+  #navbar a {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  #logo {
+    padding: 20px;
+    width: 20%;
+  }
+
+  h1 {
+    margin-top: 30px;
+  }
+
+  #chef {
+    flex-direction: column;
+  }
+
+  #description,
+  #chef_description {
+    font-size: 20px;
+    padding: 10px 0px;
+  }
+
+  #pic_1,
+  #pic_menu,
+  #pic_chef,
+  #pic_location {
+    width: 80%;
+  }
+
+  .contact {
+    font-size: 25px;
+  }
+
+  #container_location {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 800px) {
+  #navbar li,
+  #navbar a {
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  #logo {
+    padding: 16px;
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  #description,
+  #chef_description {
+    font-size: 16px;
+  }
+
+  .contact {
+    font-size: 20px;
+  }
+
+  #container_location {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 500px) {
+  #navbar li,
+  #navbar a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #logo {
+    padding: 16px;
+  }
+
+  h1 {
+    margin-top: 10px;
+  }
+
+  #description,
+  #chef_description {
+    font-size: 16px;
+  }
+
+  .contact {
+    font-size: 16px;
+  }
+}
+

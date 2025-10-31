@@ -379,6 +379,16 @@ h3 {
   border: 1px solid rgba(0, 255, 204, 0.1);
 }
 
+.stack_link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stack_link:hover {
+  transform: translateY(-15px) rotateZ(10deg) scale(1.1);
+}
+
 .stack_item {
   width: 100px;
   height: 100px;
@@ -391,10 +401,10 @@ h3 {
   border-radius: 20px;
   border: 1px solid rgba(0, 255, 204, 0.1);
   backdrop-filter: blur(10px);
+  display: block;
 }
 
-.stack_item:hover {
-  transform: translateY(-15px) rotateZ(10deg) scale(1.1);
+.stack_link:hover .stack_item {
   filter: drop-shadow(0 20px 40px rgba(0, 255, 204, 0.4));
   box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
 }
