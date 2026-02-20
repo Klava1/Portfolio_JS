@@ -1,29 +1,33 @@
 {
   "name": "klava-portfolio",
   "version": "1.0.0",
-  "description": "Klava's portfolio website showcasing frontend development projects",
-  "main": "index.html",
+  "type": "module",
+  "description": "Klava's portfolio website - React version",
   "scripts": {
-    "start": "live-server --port=3000 --open=/index.html",
-    "dev": "live-server --port=3000 --open=/index.html",
-    "build": "echo 'Static site - no build process needed'",
-    "serve": "http-server -p 3000 -o"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
   },
   "keywords": [
     "portfolio",
-    "frontend",
-    "html",
-    "css",
-    "javascript",
     "react",
-    "gsap"
+    "frontend",
+    "vite"
   ],
   "author": "Klava",
-  "license": "MIT",
-  "devDependencies": {
-    "live-server": "^1.2.2",
-    "http-server": "^14.1.1"
-  }
+  "license": "MIT"
 }
-
-
