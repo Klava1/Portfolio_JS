@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"
   publish = "dist"
+
+# SPA: serve index.html for all routes (fixes blank page on refresh/direct URL)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
